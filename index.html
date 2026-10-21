@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KF5O — Mac Software for Ham Radio</title>
+  <meta name="description" content="Native macOS apps for amateur radio by Mike Garcia, KF5O: QK4, QK-LP100A, TX500 Utility and Morse Runner for Mac.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Mac Software for Ham Radio</h1>
+      <p class="tagline">
+        Native apps for Apple Silicon by Mike Garcia, KF5O &mdash; signed, notarized,
+        drag to Applications and go.
+      </p>
+    </header>
+
+    <a class="yt-banner" href="https://www.youtube.com/@AI5QK" target="_blank" rel="noopener">
+      <span class="yt-icon">&#9654;</span>
+      New releases and demos on <strong>YouTube @AI5QK</strong> &mdash; Follow for updates
+    </a>
+
+    <!-- ── macOS ports ─────────────────────────────────────────────── -->
+    <section>
+      <h2 class="section-title">macOS Ports</h2>
+      <p class="section-subtitle">
+        Ham radio software that was Windows-only, rebuilt as native Mac apps.
+      </p>
+
+      <div class="app-grid">
+        <article class="app" data-release="morserunner">
+          <a class="app-shot" href="MorseRunner-KF5O/">
+            <img src="MorseRunner-KF5O/images/hero.png" alt="Morse Runner for macOS main window with station settings and band conditions" onerror="this.parentElement.classList.add('app-shot--missing')">
+          </a>
+          <div class="app-body">
+            <div class="app-head">
+              <h3>Morse Runner</h3>
+              <span class="badge" hidden></span>
+            </div>
+            <p class="origin">Port of Morse Runner 1.68 for Windows by Alex Shovkoplyas, VE3NEA</p>
+            <p class="app-desc">
+              The classic CW contest simulator, rebuilt in Swift and AppKit with 1:1 parity:
+              the same audio, simulated stations, scoring and layout.
+            </p>
+            <ul class="chips">
+              <li>macOS 15+</li><li>Apple Silicon &amp; Intel</li><li>Swift</li>
+            </ul>
+            <div class="app-actions">
+              <a class="btn" href="MorseRunner-KF5O/">Download &amp; details</a>
+              <a class="btn-ghost" href="https://github.com/mikeg-dal/MorseRunner-KF5O" target="_blank" rel="noopener">Source</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app" data-release="/TX500Utility/releases.json">
+          <a class="app-shot" href="TX500Utility/">
+            <img src="TX500Utility/images/hero.png" alt="TX500 Utility showing live frequency and S-meter for a connected TX-500" onerror="this.parentElement.classList.add('app-shot--missing')">
+          </a>
+          <div class="app-body">
+            <div class="app-head">
+              <h3>TX500 Utility</h3>
+              <span class="badge" hidden></span>
+            </div>
+            <p class="origin">Mac replacement for Lab599's Windows TRXSettings and TRXMem</p>
+            <p class="app-desc">
+              CAT control, all 100 memory channels, settings backup and restore, clock sync and
+              firmware updates for the Lab599 Discovery TX-500.
+            </p>
+            <ul class="chips">
+              <li>macOS 26+</li><li>Apple Silicon</li><li>Swift</li>
+            </ul>
+            <div class="app-actions">
+              <a class="btn" href="TX500Utility/">Download &amp; details</a>
+              <a class="btn-ghost" href="https://github.com/mikeg-dal/TX500Utility" target="_blank" rel="noopener">Source</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── Other apps ──────────────────────────────────────────────── -->
+    <section>
+      <h2 class="section-title">Radio &amp; Station Apps</h2>
+      <p class="section-subtitle">
+        Original apps for gear that never had a good Mac option.
+      </p>
+
+      <div class="app-grid">
+        <article class="app" data-release="/QK4/releases.json">
+          <a class="app-shot" href="QK4/">
+            <img src="QK4/images/screenshot-connected.png" alt="QK4 connected to an Elecraft K4 showing spectrum and waterfall" onerror="this.parentElement.classList.add('app-shot--missing')">
+          </a>
+          <div class="app-body">
+            <div class="app-head">
+              <h3>QK4</h3>
+              <span class="badge" hidden></span>
+            </div>
+            <p class="origin">Remote control for the Elecraft K4 and KPA1500</p>
+            <p class="app-desc">
+              Full K4 operation over your network: dual VFOs, GPU panadapter and waterfall,
+              encrypted connection and stereo Opus audio.
+            </p>
+            <ul class="chips">
+              <li>macOS 14+</li><li>Windows 11</li><li>Raspberry Pi</li>
+            </ul>
+            <div class="app-actions">
+              <a class="btn" href="QK4/">Download &amp; details</a>
+              <a class="btn-ghost" href="https://github.com/mikeg-dal/QK4" target="_blank" rel="noopener">Source</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app" data-release="/QK-LPA100A/releases.json">
+          <a class="app-shot app-shot--contain" href="QK-LPA100A/">
+            <img src="QK-LPA100A/images/screenshots/full.png" alt="QK-LP100A in Full view with power, SWR and impedance" onerror="this.parentElement.classList.add('app-shot--missing')">
+          </a>
+          <div class="app-body">
+            <div class="app-head">
+              <h3>QK-LP100A</h3>
+              <span class="badge" hidden></span>
+            </div>
+            <p class="origin">For the TelePost LP-100A Digital Vector RF Wattmeter</p>
+            <p class="app-desc">
+              Real-time power, SWR and impedance gauges, plus automated antenna sweeps with
+              Hamlib rig control and a Smith chart.
+            </p>
+            <ul class="chips">
+              <li>macOS 26+</li><li>Apple Silicon</li>
+            </ul>
+            <div class="app-actions">
+              <a class="btn" href="QK-LPA100A/">Download &amp; details</a>
+              <a class="btn-ghost" href="https://github.com/mikeg-dal/QK-LPA100A" target="_blank" rel="noopener">Source</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="dev-section">
+      <h3>Found a problem or have an idea?</h3>
+      <p>
+        Every app has its own issue tracker on GitHub &mdash; open the app's Source link and
+        choose Issues. Saying which radio firmware and macOS version you run helps a lot.
+      </p>
+      <a class="issues-link" href="https://github.com/mikeg-dal" target="_blank" rel="noopener">
+        <span class="issues-icon">&#9679;</span>
+        All projects on GitHub
+      </a>
+    </div>
+
+    <footer>
+      <p>&copy; 2025-2026 Mike Garcia &mdash; KF5O</p>
+      <p>Independent software. Not affiliated with or endorsed by Elecraft, Lab599 or TelePost.</p>
+    </footer>
+  </main>
+
+  <script>
+    // Each card shows the app's current version. App pages publish releases.json on every tag,
+    // so this page never needs editing for a new release. Morse Runner has no app page, so its
+    // version comes from the GitHub API instead.
+    document.querySelectorAll('.app[data-release]').forEach(async (card) => {
+      const src = card.dataset.release;
+      const badge = card.querySelector('.badge');
+      try {
+        let tag, pre;
+        if (src === 'morserunner') {
+          const r = await fetch('https://api.github.com/repos/mikeg-dal/MorseRunner-KF5O/releases/latest');
+          if (!r.ok) throw new Error(r.statusText);
+          const rel = await r.json();
+          tag = rel.tag_name.replace(/-macos$/, '');
+          pre = rel.prerelease;
+        } else {
+          const r = await fetch(src);
+          if (!r.ok) throw new Error(r.statusText);
+          const rel = await r.json();
+          tag = rel.tag;
+          pre = rel.prerelease;
+        }
+        if (!tag) return;
+        badge.textContent = tag;
+        if (pre) badge.classList.add('pre');
+        badge.hidden = false;
+      } catch {
+        // No badge is better than a wrong one; the card still links to the download.
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* Landing page for all apps. Shares the palette, type and components of the app pages
+   (QK4, QK-LP100A) so moving from here to an app feels like one site. */
+:root {
+  --bg: #0f1117;
+  --panel: #1a1d27;
+  --panel-hover: #1e2230;
+  --border: #2a2d37;
+  --text: #e0e0e0;
+  --muted: #9aa3b2;
+  --accent: #1a6eff;
+  --accent-hover: #3a83ff;
+  --pre: #b35e00;
+  --link: #5a9eff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+main { max-width: 1100px; margin: 0 auto; padding: 48px 20px 64px; }
+
+header { text-align: center; margin-bottom: 24px; }
+header h1 { margin: 0; font-size: 2.5rem; letter-spacing: -0.02em; line-height: 1.2; }
+.tagline { margin: 10px auto 0; max-width: 56ch; color: var(--muted); font-size: 1.05rem; }
+
+.yt-banner {
+  display: block; text-align: center; text-decoration: none;
+  color: #ccc; background: var(--panel); border: 1px solid var(--border);
+  border-radius: 8px; padding: 10px 16px; margin: 0 auto 40px; max-width: 760px;
+  font-size: 0.92rem; transition: border-color 0.15s ease, background 0.15s ease;
+}
+.yt-banner:hover { border-color: #cc0000; background: var(--panel-hover); color: #fff; }
+.yt-banner strong { color: #fff; }
+.yt-icon { color: #cc0000; margin-right: 8px; }
+
+section { margin-bottom: 44px; }
+.section-title { margin: 0; font-size: 1.4rem; text-align: center; }
+.section-subtitle { margin: 4px 0 20px; text-align: center; color: var(--muted); font-size: 0.95rem; }
+
+/* Two cards across on a desktop, one on a phone. */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.app {
+  display: flex; flex-direction: column;
+  background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.app:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+/* Screenshots are cropped to one height so the cards line up; the top of an app window is
+   the part worth seeing. */
+.app-shot {
+  display: block; aspect-ratio: 16 / 9; background: #0b0d12;
+  border-bottom: 1px solid var(--border); overflow: hidden;
+}
+.app-shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+.app-shot--icon { display: flex; align-items: center; justify-content: center;
+  background: radial-gradient(circle at 50% 45%, #1e2433 0%, #0b0d12 70%); }
+.app-shot--contain img { object-fit: contain; object-position: center; padding: 10px; }
+.app-shot--missing img { display: none; }
+
+.app-body { display: flex; flex-direction: column; flex: 1; padding: 18px 22px 22px; }
+
+.app-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.app-head h3 { margin: 0; font-size: 1.3rem; }
+
+.badge {
+  background: var(--accent); color: #fff; border-radius: 999px;
+  padding: 2px 11px; font-size: 0.78rem; font-weight: 600; white-space: nowrap;
+}
+.badge.pre { background: var(--pre); }
+
+.origin { margin: 4px 0 10px; color: var(--link); font-size: 0.88rem; }
+.app-desc { margin: 0 0 14px; color: var(--muted); font-size: 0.93rem; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0 0 18px; padding: 0; }
+.chips li {
+  font-size: 0.75rem; color: #ccc; background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border); border-radius: 999px; padding: 1px 10px;
+}
+
+.app-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; }
+.btn, .btn-ghost {
+  display: inline-block; text-decoration: none; font-size: 0.9rem; font-weight: 600;
+  border-radius: 8px; padding: 8px 20px; transition: background 0.15s ease, border-color 0.15s ease;
+}
+.btn { background: var(--accent); color: #fff; }
+.btn:hover { background: var(--accent-hover); }
+.btn-ghost { color: var(--text); border: 1px solid var(--border); }
+.btn-ghost:hover { border-color: var(--muted); }
+
+.dev-section {
+  text-align: center; max-width: 760px; margin: 8px auto 0;
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 14px; padding: 22px 24px;
+}
+.dev-section h3 { margin: 0 0 8px; font-size: 1.05rem; }
+.dev-section p { margin: 0 auto 16px; max-width: 56ch; color: var(--muted); font-size: 0.9rem; }
+
+.issues-link {
+  display: inline-block; color: #fff; background: var(--accent);
+  text-decoration: none; font-size: 0.85rem; font-weight: 600;
+  padding: 9px 22px; border-radius: 8px; transition: background 0.15s ease;
+}
+.issues-link:hover { background: var(--accent-hover); }
+.issues-icon { color: #4caf50; margin-right: 7px; font-size: 0.7rem; vertical-align: middle; }
+
+footer { margin-top: 40px; text-align: center; color: #888; font-size: 0.82rem; }
+footer p { margin: 4px 0; }
+
+@media (max-width: 640px) {
+  main { padding: 32px 16px 48px; }
+  header h1 { font-size: 1.9rem; }
+  .app-grid { grid-template-columns: 1fr; }
+}
