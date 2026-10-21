@@ -66,8 +66,6 @@ section { margin-bottom: 44px; }
   border-bottom: 1px solid var(--border); overflow: hidden;
 }
 .app-shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
-.app-shot--icon { display: flex; align-items: center; justify-content: center;
-  background: radial-gradient(circle at 50% 45%, #1e2433 0%, #0b0d12 70%); }
 .app-shot--contain img { object-fit: contain; object-position: center; padding: 10px; }
 .app-shot--missing img { display: none; }
 
